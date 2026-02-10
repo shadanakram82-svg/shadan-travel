@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Travax one palatform for safe travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Sidebar / Hamburger -->
+<div class="hamburger">☰</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">Travax</div>
+
+<nav class="nav-links">
+  <a href="#" class="glass-pill">Home</a>
+  <a href="#" class="glass-pill">Travel Plan</a>
+  <a href="#" class="glass-pill">Medical Support</a>
+  <a href="#" class="glass-pill">Emergency Support</a>
+  <a href="#" class="glass-pill">Smart Alert</a>
+  <a href="#" class="glass-pill">About</a>
+</nav>
+
+
+  <div class="nav-actions">
+    <input type="text" placeholder="Search..." />
+    <!-- <button class="login-btn glass-pill">Login</button> -->
+   <button id="loginBtn" class="login-btn glass-pill">Login</button>
+
+
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="blur-layer"></div>
+
+  <div class="hero-left">
+    <!-- <p class="small-text">Discover</p> -->
+    <h1>Travel smarter<br><span> Stay safer</span> <br> </h1>
+    <p class="desc">
+      Explore your dream land with safety, smart alerts,
+      medical and emergency support wherever you travel.
+    </p>
+    <button class="cta">Join Now</button>
+  </div>
+</section>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay hidden"></div>
+
+<!-- <div id="loginModal" class="modal hidden"> -->
+
+
+  <!-- LOGIN FORM --> 
+   <div class="auth-form " id="loginForm">
+
+    <h2>jogin</h2>+
+
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <button class="primary-btn" id="loginSubmit">Login</button>
+
+    <p class="switch-text">
+      Don’t have an account?
+      <span id="goSignup">Sign up</span>
+    </p>
+  </div>
+
+  <!-- SIGNUP FORM -->
+  <div class="auth-form" id="signupForm">
+
+    <h2>Sign Up</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <button class="primary-btn" id="signupSubmit">
+      Create Account
+    </button>
+
+    <p class="switch-text">
+      Already have an account?
+      <span id="goLogin">Login</span>
+    </p>
+  </div>
+
+</div>
+
+<!-- OUR SERVICES -->
+<!-- <section class="services-section">
+
+  <h2 class="services-title">Our Services</h2>
+  <p class="services-subtitle">
+    Smart features designed to keep your journey safe and stress-free
+  </p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🧭</div>
+      <h3>Travel Plan</h3>
+      <p>Personalized travel routes, planning and guidance.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🩺</div>
+      <h3>Medical Support</h3>
+      <p>Quick access to medical help and nearby hospitals.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🚨</div>
+      <h3>Emergency Support</h3>
+      <p>Instant emergency assistance wherever you are.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📡</div>
+      <h3>Smart Alert</h3>
+      <p>Live alerts for risk zones, weather, and safety.</p>
+    </div>
+
+  </div>
+</section> -->
+
+
+<script src="script.js"></script>
+</body>
+</html>

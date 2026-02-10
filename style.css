@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0c2d35;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Hamburger */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent; /* IMPORTANT */
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;   /* IMPORTANT */
+  align-items: center;
+  gap: 12px;
+}
+
+
+.logo {
+  font-weight: 700;
+  font-size: large;
+  text-transform: none;
+  color: white;
+}
+
+
+.nav-links a {
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+
+  background: rgba(82, 77, 77, 0.566);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-actions input {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+
+  border: none;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #000;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.nav-actions input:hover {
+  background: white;
+  transform: translateY(-2px);
+}
+
+.nav-actions input:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.nav-actions input::placeholder {
+  color: #555;
+}
+
+
+
+/* Hero */
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background:
+    url("back-new.png") center / cover no-repeat;
+  position: relative;
+   z-index: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* LEFT 50% BLUR */
+.blur-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* CONTENT */
+.hero-left {
+  width: 50%;
+  padding: 120px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.hero-left {
+  width: 50%;
+  padding: 120px 80px;
+  z-index: 2;
+}
+
+
+.small-text {
+  opacity: 0.7;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #9ad6e3;
+}
+
+.desc {
+  max-width: 400px;
+  opacity: 0.85;
+  margin-bottom: 25px;
+}
+
+.cta {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  background: #9ad6e3;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.glass-pill {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.glass-pill:hover {
+  background: rgba(255, 255, 255, 0.26);
+  transform: translateY(-2px);
+}
+
+
+/* Overlay background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6); /* transparency */
+  z-index: 40;
+}
+
+
+/* Hide utility */
+.hidden {
+  display: none;
+}
+
+.login-btn {
+  border: 1px solid yellow;
+  padding: 10px 22px;
+  border-radius: 999px;                 /* pill = premium */
+  background: rgba(82, 77, 77, 0.566);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(187, 164, 164, 0.845);
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Hover = intent, not chaos */
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Click feedback */
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* ===== Overlay ===== */
+/* .overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 200;
+} */
+
+
+
+/* ===== Login Modal ===== */
+.modal {
+  /* border: 1px solid yellow; */
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 360px;
+  padding: 22px;
+
+  background: #121212;
+  color: #fff;
+
+  border-radius: 16px;
+  box-shadow: 0 0px 17px rgba(59, 59, 57, 0.6);
+
+  z-index: 300;
+
+  display: flex;              /* 👈 NEW */
+  align-items: center;        /* 👈 NEW */
+}
+
+/* Title */
+.modal h2 {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+
+/* Inputs */
+.modal input {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 10px;
+
+
+  padding: 0 14px;
+
+  background: #1e1e1e;
+  color: #fff;
+
+  border: 1px solid #333;
+  border-radius: 10px;
+
+  font-size: 14px;
+}
+
+.modal input::placeholder {
+  color: #888;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: #6dd5ed;
+}
+
+/* Buttons */
+.modal button {
+  /* border: 1px solid yellow; */
+
+  width: 100%;
+  height: 42px;
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Primary login button */
+.modal button:first-of-type {
+  background: #6dd5ed;
+  color: #000;
+}
+
+/* Close button */
+.modal button:last-of-type {
+  background: transparent;
+  color: #aaa;
+  border: 1px solid #333;
+}
+
+.modal button:last-of-type:hover {
+  color: #fff;
+  border-color: #555;
+}
+
+
+
+/* Auth forms */
+/* .auth-form {
+  width: 100%;
+  display: none;             
+  flex-direction: column;
+} */
+
+ /* 👈 default hide */
+
+ .auth-form.active {
+  display: flex;          
+}  
+
+
+ /* 👈 sirf active dikhe */
+
+
+
+/* Primary button */
+.primary-btn {
+  background: #6dd5ed;
+  color: #000;
+}
+
+/* Switch text */
+.switch-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.switch-text span {
+  color: #6dd5ed;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   OUR SERVICES SECTION
+========================= */
+
+.services-section {
+  background: #f4f8fb;          /* light theme */
+  padding: 80px 60px;
+  text-align: center;
+  color: #111;
+}
+
+.services-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.service-card {
+  background: #fff;
+  border-radius: 50%;
+  height: 240px;
+  width: 240px;
+
+  margin: auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+/* Icon */
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+/* Title */
+.service-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.service-card p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
